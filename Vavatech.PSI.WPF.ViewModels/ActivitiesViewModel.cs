@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Input;
+using Vavatech.PSI.WPF.Common;
 using Vavatech.PSI.WPF.IServices;
 using Vavatech.PSI.WPF.MockServices;
 using Vavatech.PSI.WPF.Models;
+using System.Threading.Tasks;
 
 namespace Vavatech.PSI.WPF.ViewModels
 {
@@ -13,6 +16,11 @@ namespace Vavatech.PSI.WPF.ViewModels
 
         private readonly IActivitiesService activitiesService;
 
+        public ICommand LoadCommand { get; private set; }
+
+        public bool IsBusy { get; set; }
+
+
         public ActivitiesViewModel()
             : this(new MockActivitiesService(new MockEmployeesService()))
         {
@@ -23,12 +31,24 @@ namespace Vavatech.PSI.WPF.ViewModels
         {
             this.activitiesService = activitiesService;
 
-            Load();
+            LoadCommand = new RelayCommand(p => LoadAsync());
+
+          
+
+            
         }
+
 
         private void Load()
         {
-            Activities = activitiesService.Get();
+            LoadAsync().Wait();
+        }
+
+        private async Task LoadAsync()
+        {
+            IsBusy = true;
+            Activities = await activitiesService.GetAsync();
+            IsBusy = false;
         }
 
     }

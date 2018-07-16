@@ -18,10 +18,9 @@
             
             <!-- Header -->
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="50">
-                <Button Width="100">Employees</Button>
-                <Button Command="{Binding ShowActivitiesCommand}" Width="100">Activities</Button>
+                <Button Command="{Binding ShowEmployeesCommand}">Employees</Button>
+                <Button Command="{Binding ShowActivitiesCommand}">Activities</Button>
             </StackPanel>
-
 
             <!-- Content -->
             <Border BorderBrush="Black" BorderThickness="1">

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Vavatech.PSI.WPF.IServices;
 using Vavatech.PSI.WPF.Models;
@@ -32,9 +33,20 @@ namespace Vavatech.PSI.WPF.MockServices
         }
 
         public void Add(Activity entity) => entities.Add(entity);
-        public IList<Activity> Get() => entities;
+
+        public IList<Activity> Get()
+        {
+            Thread.Sleep(TimeSpan.FromSeconds(3));
+            return entities;
+        }
+
         public Activity Get(int id) => entities.SingleOrDefault(e => e.Id == id);
         public void Remove(Activity entity) => entities.Remove(entity);
         public void Update(Activity entity) => throw new NotImplementedException();
+
+        public Task<IList<Activity>> GetAsync()
+        {
+            return Task.Run(() => Get());
+        }
     }
 }

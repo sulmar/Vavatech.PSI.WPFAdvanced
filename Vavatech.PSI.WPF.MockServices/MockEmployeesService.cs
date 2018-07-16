@@ -32,6 +32,8 @@ namespace Vavatech.PSI.WPF.MockServices
 
         public Employee Get(int id) => employees.SingleOrDefault(e => e.Id == id);
 
+        public Task<IList<Employee>> GetAsync() => Task.Run(() => Get());
+
         public void Remove(Employee entity) => employees.Remove(entity);
 
         public void Update(Employee entity)

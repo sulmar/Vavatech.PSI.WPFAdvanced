@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Vavatech.PSI.WPF.Models;
 
 namespace Vavatech.PSI.WPF.IServices
@@ -11,6 +12,8 @@ namespace Vavatech.PSI.WPF.IServices
         void Add(TEntity entity);
         void Update(TEntity entity);
         void Remove(TEntity entity);
+
+        Task<IList<TEntity>> GetAsync();
     }
 
    

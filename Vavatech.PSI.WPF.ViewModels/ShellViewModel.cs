@@ -10,7 +10,7 @@ namespace Vavatech.PSI.WPF.ViewModels
 {
     public class ShellViewModel : BaseViewModel
     {
-
+        // PM> Install-Package PropertyChanged.Fody
         public BaseViewModel SelectedViewModel { get; set; }
         
         public ShellViewModel()
@@ -18,10 +18,12 @@ namespace Vavatech.PSI.WPF.ViewModels
             SelectedViewModel = new EmployeesViewModel();
 
             ShowActivitiesCommand = new RelayCommand(p => ShowActivities(), p => CanShowActivities);
+            ShowEmployeesCommand = new RelayCommand(p => ShowEmployees());
         }
 
 
         public ICommand ShowActivitiesCommand { get; private set; }
+        public ICommand ShowEmployeesCommand { get; private set; }
 
         public void ShowActivities()
         {
@@ -29,6 +31,13 @@ namespace Vavatech.PSI.WPF.ViewModels
         }
 
         public bool CanShowActivities => true;
+
+
+        public void ShowEmployees()
+        {
+            SelectedViewModel = new EmployeesViewModel();
+        }
+
 
     }
 }
