@@ -10,6 +10,15 @@ namespace Vavatech.PSI.WPF.Models
         public Employee Assigned { get; set; }
         public ActivityType Type { get; set; }
 
+        public Activity(int id, DateTime startTime, DateTime? endTime, Employee assigned, ActivityType type)
+        {
+            Id = id;
+            StartTime = startTime;
+            EndTime = endTime;
+            Assigned = assigned;
+            Type = type;
+        }
     }
+
     
 }

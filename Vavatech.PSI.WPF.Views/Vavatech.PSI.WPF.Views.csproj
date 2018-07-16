@@ -4,20 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DBD34A0F-4BD9-462E-BD65-6B6331FE3C7B}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Vavatech.PSI.WPF.WPFClient</RootNamespace>
-    <AssemblyName>Vavatech.PSI.WPF.WPFClient</AssemblyName>
+    <ProjectGuid>{4FD846A1-8488-4777-8059-BC51B8880184}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>Vavatech.PSI.WPF.Views</RootNamespace>
+    <AssemblyName>Vavatech.PSI.WPF.Views</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -27,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -52,19 +47,12 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="ActivitiesView.xaml.cs">
+      <DependentUpon>ActivitiesView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ShellView.xaml.cs">
-      <DependentUpon>ShellView.xaml</DependentUpon>
+    <Compile Include="EmployeesView.xaml.cs">
+      <DependentUpon>EmployeesView.xaml</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -88,32 +76,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Vavatech.PSI.WPF.ViewModels\Vavatech.PSI.WPF.ViewModels.csproj">
-      <Project>{5cbf7d2a-1e7f-4110-b98b-d9aad0988d50}</Project>
-      <Name>Vavatech.PSI.WPF.ViewModels</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Vavatech.PSI.WPF.Views\Vavatech.PSI.WPF.Views.csproj">
-      <Project>{4fd846a1-8488-4777-8059-bc51b8880184}</Project>
-      <Name>Vavatech.PSI.WPF.Views</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Resources\DataTemplates.xaml">
+    <Page Include="ActivitiesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resources\Styles.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Resources\ViewViewModels.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ShellView.xaml">
+    <Page Include="EmployeesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

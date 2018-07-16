@@ -7,6 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.PSI.WPF.WPFClient"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.PSI.WPF.Models", "Vavatech.PSI.WPF.Models\Vavatech.PSI.WPF.Models.csproj", "{2A10B82A-8EA1-4FAB-8905-6B2C0E4F6BB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.PSI.WPF.IServices", "Vavatech.PSI.WPF.IServices\Vavatech.PSI.WPF.IServices.csproj", "{0CD71160-FB75-4C1F-AFCF-EBD21694B9D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.PSI.WPF.MockServices", "Vavatech.PSI.WPF.MockServices\Vavatech.PSI.WPF.MockServices.csproj", "{EE5412DB-97BA-42BF-BF03-454EC8539354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.PSI.WPF.ViewModels", "Vavatech.PSI.WPF.ViewModels\Vavatech.PSI.WPF.ViewModels.csproj", "{5CBF7D2A-1E7F-4110-B98B-D9AAD0988D50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.PSI.WPF.Views", "Vavatech.PSI.WPF.Views\Vavatech.PSI.WPF.Views.csproj", "{4FD846A1-8488-4777-8059-BC51B8880184}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vavatech.PSI.WPF.Common", "Vavatech.PSI.WPF.Common\Vavatech.PSI.WPF.Common.csproj", "{33C3D735-F717-46F2-85F7-06DC391F0F39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +31,26 @@ Global
 		{2A10B82A-8EA1-4FAB-8905-6B2C0E4F6BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A10B82A-8EA1-4FAB-8905-6B2C0E4F6BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A10B82A-8EA1-4FAB-8905-6B2C0E4F6BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD71160-FB75-4C1F-AFCF-EBD21694B9D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD71160-FB75-4C1F-AFCF-EBD21694B9D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD71160-FB75-4C1F-AFCF-EBD21694B9D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD71160-FB75-4C1F-AFCF-EBD21694B9D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5412DB-97BA-42BF-BF03-454EC8539354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5412DB-97BA-42BF-BF03-454EC8539354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5412DB-97BA-42BF-BF03-454EC8539354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5412DB-97BA-42BF-BF03-454EC8539354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CBF7D2A-1E7F-4110-B98B-D9AAD0988D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CBF7D2A-1E7F-4110-B98B-D9AAD0988D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CBF7D2A-1E7F-4110-B98B-D9AAD0988D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CBF7D2A-1E7F-4110-B98B-D9AAD0988D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD846A1-8488-4777-8059-BC51B8880184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD846A1-8488-4777-8059-BC51B8880184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD846A1-8488-4777-8059-BC51B8880184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD846A1-8488-4777-8059-BC51B8880184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C3D735-F717-46F2-85F7-06DC391F0F39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C3D735-F717-46F2-85F7-06DC391F0F39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C3D735-F717-46F2-85F7-06DC391F0F39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C3D735-F717-46F2-85F7-06DC391F0F39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
