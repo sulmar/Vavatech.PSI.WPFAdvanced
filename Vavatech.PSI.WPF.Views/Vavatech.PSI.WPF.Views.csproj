@@ -56,6 +56,7 @@
     <Compile Include="ActivitiesView.xaml.cs">
       <DependentUpon>ActivitiesView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\ActivitityTypeToBrushConverter.cs" />
     <Compile Include="EmployeesView.xaml.cs">
       <DependentUpon>EmployeesView.xaml</DependentUpon>
     </Compile>
@@ -93,6 +94,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Vavatech.PSI.WPF.Common\Vavatech.PSI.WPF.Common.csproj">
+      <Project>{33c3d735-f717-46f2-85f7-06dc391f0f39}</Project>
+      <Name>Vavatech.PSI.WPF.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vavatech.PSI.WPF.Models\Vavatech.PSI.WPF.Models.csproj">
+      <Project>{2A10B82A-8EA1-4FAB-8905-6B2C0E4F6BB9}</Project>
+      <Name>Vavatech.PSI.WPF.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vavatech.PSI.WPF.ViewModels\Vavatech.PSI.WPF.ViewModels.csproj">
       <Project>{5cbf7d2a-1e7f-4110-b98b-d9aad0988d50}</Project>
       <Name>Vavatech.PSI.WPF.ViewModels</Name>

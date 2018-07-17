@@ -6,11 +6,16 @@
              xmlns:vm="clr-namespace:Vavatech.PSI.WPF.ViewModels;assembly=Vavatech.PSI.WPF.ViewModels"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:local="clr-namespace:Vavatech.PSI.WPF.Views"
+             xmlns:c="clr-namespace:Vavatech.PSI.WPF.Common.Converters;assembly=Vavatech.PSI.WPF.Common"
              mc:Ignorable="d" 
              d:DesignHeight="450" 
              d:DesignWidth="800"
              d:DataContext="{d:DesignInstance Type=vm:ActivitiesViewModel, IsDesignTimeCreatable=True}"
              >
+
+    <!--<UserControl.Resources>
+        <c:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    </UserControl.Resources>-->
 
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
@@ -23,12 +28,11 @@
     <Grid>
 
 
-        <ListBox ItemsSource="{Binding Activities}" />
+        <ListBox ItemsSource="{Binding Activities}"  />
 
         <Border Opacity="0.3"
                 Background="Indigo"
-                Visibility="Visible"
-                >
+                Visibility="{Binding IsBusy, Converter={c:BoolToVisibilityConverter}}" >
 
             <ProgressBar
                 Background="Transparent"
@@ -36,6 +40,8 @@
 
         </Border>
 
+       
+       
 
 
     </Grid>

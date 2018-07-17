@@ -98,6 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Vavatech.PSI.WPF.Common\Vavatech.PSI.WPF.Common.csproj">
+      <Project>{33c3d735-f717-46f2-85f7-06dc391f0f39}</Project>
+      <Name>Vavatech.PSI.WPF.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vavatech.PSI.WPF.Models\Vavatech.PSI.WPF.Models.csproj">
       <Project>{2a10b82a-8ea1-4fab-8905-6b2c0e4f6bb9}</Project>
       <Name>Vavatech.PSI.WPF.Models</Name>
