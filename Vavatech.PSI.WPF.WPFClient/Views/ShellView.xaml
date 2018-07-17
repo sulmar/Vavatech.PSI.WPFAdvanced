@@ -20,6 +20,7 @@
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="50">
                 <Button Command="{Binding ShowEmployeesCommand}">Employees</Button>
                 <Button Command="{Binding ShowActivitiesCommand}">Activities</Button>
+                <Button Command="{Binding ShowKeyboardCommand}">Keyboard</Button>
             </StackPanel>
 
             <!-- Content -->

@@ -5,6 +5,8 @@
 
     <Style TargetType="Button">
         <Setter Property="Width" Value="100" />
+        <Setter Property="Height" Value="100" />
+        <Setter Property="FontSize" Value="30" />
         <Setter Property="Background" Value="Indigo" />
         <Setter Property="Foreground" Value="White" />
     </Style>

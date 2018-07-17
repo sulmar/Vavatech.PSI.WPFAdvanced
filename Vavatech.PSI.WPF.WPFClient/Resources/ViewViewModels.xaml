@@ -10,5 +10,10 @@
     <DataTemplate DataType="{x:Type vm:EmployeesViewModel}" >
         <v:EmployeesView />
     </DataTemplate>
-    
+
+    <DataTemplate DataType="{x:Type vm:KeyboardViewModel}" >
+        <v:KeyboardView />
+    </DataTemplate>
+
+
 </ResourceDictionary>

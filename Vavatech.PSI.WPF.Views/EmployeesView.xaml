@@ -3,13 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:me="clr-namespace:Vavatech.PSI.WPF.Common.MarkupExtensions;assembly=Vavatech.PSI.WPF.Common"
+             xmlns:m="clr-namespace:Vavatech.PSI.WPF.Models;assembly=Vavatech.PSI.WPF.Models"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:b="clr-namespace:Vavatech.PSI.WPF.Common.Behaviors;assembly=Vavatech.PSI.WPF.Common"
+             xmlns:a="clr-namespace:Vavatech.PSI.WPF.Common.AttachedProperties;assembly=Vavatech.PSI.WPF.Common"
              xmlns:local="clr-namespace:Vavatech.PSI.WPF.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label
+        
+
+        <StackPanel>
+
+            <Label
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            >Employees View</Label>
+            Content="{me:CurrentDirectory}"
+            />
+            
+            <ComboBox ItemsSource="{me:SplitBinding Source=poniedzialek;wtorek;sroda, Separator=;}" />
+
+            <ComboBox ItemsSource="{me:EnumSource m:ActivityType}"  IsDropDownOpen="True" />
+
+            <ComboBox ItemsSource="{me:ObservableSource}" a:Expand.IsExpand="True"  />
+
+            <Slider Name="slider1" Minimum="0" Maximum="300" />
+
+            <Button Content="Hello">
+                <i:Interaction.Behaviors>
+                    <b:ButtonBehavior Width="{Binding ElementName=slider1, Path=Value}" Content="{me:CurrentDirectory}"  />
+                </i:Interaction.Behaviors>
+            </Button>
+
+            <a:TextBoxEx Content="{Binding ElementName=slider1, Path=Value}"/>
+
+            <a:TextBoxEx>
+                Hello World
+            </a:TextBoxEx>
+
+            <TextBox a:Ex.Content="Hello World" />
+
+        </StackPanel>
+
+        
     </Grid>
 </UserControl>

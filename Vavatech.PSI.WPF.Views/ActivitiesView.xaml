@@ -27,8 +27,50 @@
 
     <Grid>
 
+        <!--<ScrollViewer Height="100">
+            <VirtualizingStackPanel>
+                <Button>Button 1</Button>
+                <Button>Button 2</Button>
+                <Button>Button 3</Button>
+                <Button>Button 4</Button>
+                <Button>Button 5</Button>
+                <Button>Button 6</Button>
+                <Button>Button 7</Button>
+                <Button>Button 8</Button>
+                <Button>Button 9</Button>
+                <Button>Button 10</Button>
+                <Button>Button 11</Button>
+                <Button>Button 12</Button>
+                <Button>Button 13</Button>
+                <Button>Button 14</Button>
+            </VirtualizingStackPanel>
+        </ScrollViewer>-->
 
-        <ListBox ItemsSource="{Binding Activities}"  />
+        <!--<ListBox ItemsSource="{Binding Activities}" 
+                VirtualizingPanel.IsVirtualizing="True"
+                 />-->
+
+        <ComboBox ItemsSource="{Binding Activities}" Height="50"
+                   VirtualizingPanel.IsVirtualizing="True"
+                   VirtualizingPanel.VirtualizationMode="Recycling"
+                   VirtualizingPanel.CacheLength="2,3"
+                   VirtualizingPanel.CacheLengthUnit="Page"
+                  >
+
+            <ComboBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel />
+                </ItemsPanelTemplate>
+            </ComboBox.ItemsPanel>
+        </ComboBox>
+
+
+        <DataGrid ItemsSource="{Binding Activities}"
+                  AutoGenerateColumns="True"
+                  EnableRowVirtualization="True"
+                  EnableColumnVirtualization="True"
+                  VirtualizingPanel.IsVirtualizing="True"
+                  />
 
         <Border Opacity="0.3"
                 Background="Indigo"

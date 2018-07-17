@@ -19,11 +19,17 @@ namespace Vavatech.PSI.WPF.ViewModels
 
             ShowActivitiesCommand = new RelayCommand(p => ShowActivities(), p => CanShowActivities);
             ShowEmployeesCommand = new RelayCommand(p => ShowEmployees());
+            ShowKeyboardCommand = new RelayCommand(p => ShowKeyboard());
         }
 
+        private void ShowKeyboard()
+        {
+            SelectedViewModel = new KeyboardViewModel();
+        }
 
         public ICommand ShowActivitiesCommand { get; private set; }
         public ICommand ShowEmployeesCommand { get; private set; }
+        public ICommand ShowKeyboardCommand { get; private set; }
 
         public void ShowActivities()
         {
