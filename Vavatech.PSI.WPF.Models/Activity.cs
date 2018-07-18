@@ -32,6 +32,8 @@ namespace Vavatech.PSI.WPF.Models
             Assigned = assigned;
             Type = type;
             Location = location;
+
+
         }
     }
 

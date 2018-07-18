@@ -1,11 +1,12 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
                     xmlns:local="clr-namespace:Vavatech.PSI.WPF.WPFClient.Resources">
 
-    
 
-    <SolidColorBrush x:Key="BackgroundBrush">Indigo</SolidColorBrush>
+
+    <SolidColorBrush x:Key="BackgroundBrush" PresentationOptions:Freeze="true" >Indigo</SolidColorBrush>
     <SolidColorBrush x:Key="ForegroundBrush">White</SolidColorBrush>
     <SolidColorBrush x:Key="DangerBrush">Red</SolidColorBrush>
 
@@ -29,6 +30,13 @@
 
     <Style x:Key="DangerButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}" >
         <Setter Property="Background" Value="{StaticResource DangerBrush}" />
+    </Style>
+
+    <Style TargetType="TextBox">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="BorderBrush" Value="Blue" />
+        <Setter Property="BorderThickness" Value="3" />
     </Style>
     
 </ResourceDictionary>

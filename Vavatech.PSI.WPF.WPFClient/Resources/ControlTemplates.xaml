@@ -3,6 +3,46 @@
                     xmlns:local="clr-namespace:Vavatech.PSI.WPF.WPFClient.Resources">
 
 
+    <ControlTemplate x:Key="TextBoxTemplate" TargetType="TextBox">
+        <Grid>
+            <Border 
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Background="{TemplateBinding Background}" >
+
+                <!-- https://docs.microsoft.com/en-us/dotnet/framework/wpf/controls/textbox-styles-and-templates -->
+                <ScrollViewer x:Name="PART_ContentHost"
+                              Focusable="False"
+                              HorizontalScrollBarVisibility="Hidden"
+                              VerticalScrollBarVisibility="Hidden"
+                              />
+
+            </Border>
+
+            <TextBlock Text="{TemplateBinding Tag}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="Gray"
+                       Padding="{TemplateBinding Padding}"
+                       FontSize="{TemplateBinding FontSize}" >
+
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Visibility" Value="Hidden" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, RelativeSource={RelativeSource TemplatedParent}}" Value="">
+                                <Setter Property="Visibility" Value="Visible" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+                
+            </TextBlock>
+
+
+        </Grid>
+    </ControlTemplate>
+
 
     <ControlTemplate x:Key="MyButtonTemplate" TargetType="Button">
         <Grid>
@@ -33,8 +73,8 @@
             <EventTrigger RoutedEvent="Loaded">
                 <BeginStoryboard>
                     <Storyboard>
-                        
-                        <DoubleAnimation 
+
+                        <DoubleAnimation Storyboard.DesiredFrameRate="20"
                             Storyboard.TargetProperty="Width" 
                             To="200"
                             Duration="0:0:1"

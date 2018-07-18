@@ -5,7 +5,10 @@
                     xmlns:c="clr-namespace:Vavatech.PSI.WPF.Views.Converters;assembly=Vavatech.PSI.WPF.Views"
                     xmlns:local="clr-namespace:Vavatech.PSI.WPF.WPFClient.Resources">
 
-    
+
+    <BitmapImage x:Key="EmployeesImage" UriSource="../Assets/Business man-02-WF.png" />
+    <BitmapImage x:Key="ActivitiesImage" UriSource="../Assets/Business man-02-WF.png" />
+
 
     <DataTemplate DataType="{x:Type m:Activity}">
         <Grid>

@@ -51,21 +51,67 @@
                      />
         </Canvas>-->
 
-        <ItemsControl ItemsSource="{Binding Activities}">
+        <!--<ItemsControl ItemsSource="{Binding Activities}" >
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
+                    --><!-- VirtualCanvas
+                    https://blogs.msdn.microsoft.com/jgoldb/2008/03/09/virtualized-wpf-canvas/ --><!--
                     <Canvas />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
-            
+
             <ItemsControl.ItemContainerStyle>
                 <Style TargetType="ContentPresenter">
                     <Setter Property="Canvas.Left" Value="{Binding Location.Left}"/>
                     <Setter Property="Canvas.Top" Value="{Binding Location.Top}"/>
                 </Style>
+
             </ItemsControl.ItemContainerStyle>
 
-        </ItemsControl>
+        </ItemsControl>-->
 
+
+        <DockPanel>
+
+            <!-- Panel -->
+            <StackPanel DockPanel.Dock="Right" Width="200" DataContext="{Binding SelectedActivity}">
+                <TextBox Text="{Binding Id}" />
+                <TextBox Text="{Binding StartTime}" />
+                <TextBox Text="{Binding EndTime}" />
+                <TextBox Text="{Binding Assigned.FirstName, UpdateSourceTrigger=PropertyChanged}" 
+                         Template="{StaticResource TextBoxTemplate}"
+                         Tag="Podaj imię"
+                         />
+                <TextBox Text="{Binding Assigned.LastName, UpdateSourceTrigger=PropertyChanged}" 
+                         Template="{StaticResource TextBoxTemplate}" 
+                         Tag="Podaj nazwisko"
+                         />
+                
+                <TextBlock Text="{Binding Assigned.FullName, Mode=OneWay}" />
+            </StackPanel>
+            
+            
+            <!-- Content -->
+            <ListBox ItemsSource="{Binding Activities}"
+                     SelectedItem="{Binding SelectedActivity}" >
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <!-- VirtualCanvas
+                        https://blogs.msdn.microsoft.com/jgoldb/2008/03/09/virtualized-wpf-canvas/ -->
+                        <Canvas />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Canvas.Left" Value="{Binding Location.Left}"/>
+                        <Setter Property="Canvas.Top" Value="{Binding Location.Top}"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+
+            </ListBox>
+
+        </DockPanel>
+        
     </Grid>
 </UserControl>

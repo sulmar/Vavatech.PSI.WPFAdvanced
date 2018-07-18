@@ -23,7 +23,7 @@ namespace Vavatech.PSI.WPF.MockServices
                     DateTime.Today.AddHours(random.Next(9, 16)),
                     employeesService.Get(random.Next(1, 1000)),
                     (ActivityType) random.Next(0, 3),
-                    new Location(random.Next(0,1000), random.Next(0, 400))
+                    new Location(random.Next(0,1500), random.Next(0, 1000))
                 )).ToList();
 
         }

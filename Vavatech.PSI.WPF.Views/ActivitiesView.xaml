@@ -70,7 +70,7 @@
                   EnableRowVirtualization="True"
                   EnableColumnVirtualization="True"
                   VirtualizingPanel.IsVirtualizing="True"
-                  Visibility="Collapsed"
+                  Visibility="Hidden"
                   />
 
         <Border Opacity="0.3"

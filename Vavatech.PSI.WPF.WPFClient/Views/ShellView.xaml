@@ -18,9 +18,31 @@
             
             <!-- Header -->
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
-                <Button Command="{Binding ShowEmployeesCommand}">Employees</Button>
-                <Button Command="{Binding ShowActivitiesCommand}">Activities</Button>
-                <Button Command="{Binding ShowKeyboardCommand}">Keyboard</Button>
+                <Button Command="{Binding ShowEmployeesCommand}">
+                    <Image Source="{StaticResource ActivitiesImage}"
+                           RenderOptions.BitmapScalingMode="LowQuality"
+                           
+                           />
+                </Button>
+                <Button Command="{Binding ShowActivitiesCommand}">
+                    <Image Source="{StaticResource ActivitiesImage}" />
+                </Button>
+                <Button Command="{Binding ShowKeyboardCommand}">
+                    <Grid>
+                        <Line X1="0" Y1="0" X2="50" Y2="50"
+                              Fill="White"
+                              Stroke="White"
+                              StrokeThickness="3"
+                              />
+
+                        <Line X1="50" Y1="0" X2="0" Y2="50"
+                              Fill="White"
+                              Stroke="White"
+                              StrokeThickness="3"
+                              />
+
+                    </Grid>
+                </Button>
             </StackPanel>
 
             <!-- Content -->

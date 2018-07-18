@@ -60,6 +60,11 @@
       <DependentUpon>CanvasView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\ActivitityTypeToBrushConverter.cs" />
+    <Compile Include="CustomControlsView.xaml.cs">
+      <DependentUpon>CustomControlsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\MyControl.cs" />
+    <Compile Include="CustomControls\MyCustomControl.cs" />
     <Compile Include="EmployeesView.xaml.cs">
       <DependentUpon>EmployeesView.xaml</DependentUpon>
     </Compile>
@@ -78,6 +83,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="VisualDrawings\MyVisualHost.cs" />
+    <Compile Include="VisualDrawingView.xaml.cs">
+      <DependentUpon>VisualDrawingView.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -98,11 +107,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CustomControlsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EmployeesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="KeyboardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VisualDrawingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
