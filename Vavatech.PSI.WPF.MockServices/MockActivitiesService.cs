@@ -17,12 +17,13 @@ namespace Vavatech.PSI.WPF.MockServices
         {
             Random random = new Random();
 
-            entities = Enumerable.Range(1, 10000)
+            entities = Enumerable.Range(1, 100)
               .Select(i => new Activity(i,
                     DateTime.Today.AddHours(random.Next(0, 8)),
                     DateTime.Today.AddHours(random.Next(9, 16)),
                     employeesService.Get(random.Next(1, 1000)),
-                    (ActivityType) random.Next(0, 3)
+                    (ActivityType) random.Next(0, 3),
+                    new Location(random.Next(0,1000), random.Next(0, 400))
                 )).ToList();
 
         }
@@ -36,7 +37,7 @@ namespace Vavatech.PSI.WPF.MockServices
 
         public IList<Activity> Get()
         {
-            Thread.Sleep(TimeSpan.FromSeconds(3));
+            // Thread.Sleep(TimeSpan.FromSeconds(3));
             return entities;
         }
 

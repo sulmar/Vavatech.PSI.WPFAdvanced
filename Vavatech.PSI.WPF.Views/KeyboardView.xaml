@@ -7,23 +7,66 @@
              mc:Ignorable="d" 
          
              d:DesignHeight="450" d:DesignWidth="900">
+    <UserControl.Resources>
+        <Storyboard x:Key="OnClick1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="127.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="134"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-135.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-50.666"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="button">
+                <EasingColorKeyFrame KeyTime="0:0:3" Value="#FFBA1A1A"/>
+                <EasingColorKeyFrame KeyTime="0:0:4" Value="#FF18804D"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="button">
+            <BeginStoryboard Storyboard="{StaticResource OnClick1}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
     <Grid Button.Click="Grid_Click">
 
         <CheckBox>Option 1</CheckBox>
 
         <UniformGrid Rows="3" Columns="3"
-                         Button.Click="UniformGrid_Click"
-                     >
-            <Button>1</Button>
+                         Button.Click="UniformGrid_Click" >
+            <Button Content="1" >
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,1"
+                                         EndPoint="0,0"
+                                         >
+                        <GradientStop Offset="0" Color="Blue" />
+                        <GradientStop Offset="1" Color="White" />
+
+
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
             <Button>2</Button>
             <Button>3</Button>
-            <Button>4</Button>
-            <Button>5</Button>
+
+
+            <Button Content="4" />
+            <Button x:Name="button" Style="{StaticResource DangerButton}" Background="#FFBA1A1A" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform> 5
+            </Button>
             <Button>6</Button>
             <Button>7</Button>
-            <Button>8</Button>
-            <Button>9</Button>
+            <Button Content="8"/>
+            <Button Style="{StaticResource DangerButton}">9</Button>
         </UniformGrid>
-            
+
     </Grid>
 </UserControl>

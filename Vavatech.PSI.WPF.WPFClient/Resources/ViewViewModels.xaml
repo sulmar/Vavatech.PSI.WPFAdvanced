@@ -4,7 +4,8 @@
                     xmlns:v="clr-namespace:Vavatech.PSI.WPF.Views;assembly=Vavatech.PSI.WPF.Views">
 
     <DataTemplate DataType="{x:Type vm:ActivitiesViewModel}" >
-        <v:ActivitiesView />
+        <!--<v:ActivitiesView />-->
+        <v:CanvasView />
     </DataTemplate>
 
     <DataTemplate DataType="{x:Type vm:EmployeesViewModel}" >

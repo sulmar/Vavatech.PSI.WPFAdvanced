@@ -17,7 +17,7 @@
         <DockPanel>
             
             <!-- Header -->
-            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="50">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
                 <Button Command="{Binding ShowEmployeesCommand}">Employees</Button>
                 <Button Command="{Binding ShowActivitiesCommand}">Activities</Button>
                 <Button Command="{Binding ShowKeyboardCommand}">Keyboard</Button>
