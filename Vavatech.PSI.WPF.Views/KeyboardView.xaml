@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:Vavatech.PSI.WPF.Views.CustomPanels"
              xmlns:local="clr-namespace:Vavatech.PSI.WPF.Views"
              mc:Ignorable="d" 
          
@@ -33,7 +34,9 @@
         <CheckBox>Option 1</CheckBox>
 
         <UniformGrid Rows="3" Columns="3"
-                         Button.Click="UniformGrid_Click" >
+                         Button.Click="UniformGrid_Click"
+                        Visibility="Collapsed"
+                     >
             <Button Content="1" >
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,1"
@@ -68,5 +71,30 @@
             <Button Style="{StaticResource DangerButton}">9</Button>
         </UniformGrid>
 
+
+
+        <p:RadialPanel>
+            <Button Content="1" >
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,1"
+                                         EndPoint="0,0"
+                                         >
+                        <GradientStop Offset="0" Color="Blue" />
+                        <GradientStop Offset="1" Color="White" />
+
+
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button>2</Button>
+            <Button>3</Button>
+            <Button Content="4" />
+            <Button Content="5" Style="{StaticResource DangerButton}" Background="#FFBA1A1A" />
+            <Button>6</Button>
+            <Button>7</Button>
+            <Button Content="8"/>
+            <Button Style="{StaticResource DangerButton}">9</Button>
+        </p:RadialPanel>
     </Grid>
 </UserControl>

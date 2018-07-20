@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="CustomControls\MyControl.cs" />
     <Compile Include="CustomControls\MyCustomControl.cs" />
+    <Compile Include="CustomPanels\RadialPanel.cs" />
     <Compile Include="EmployeesView.xaml.cs">
       <DependentUpon>EmployeesView.xaml</DependentUpon>
     </Compile>
